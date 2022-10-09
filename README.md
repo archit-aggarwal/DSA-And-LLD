@@ -5,3 +5,6 @@
 
 # Notes Link:
 https://drive.google.com/drive/folders/1UfscSvllHyXPlIGK4WxyoMDF-z_jUJD4?usp=sharing
+
+# DSA Sheet 2.0:
+https://drive.google.com/file/d/1TCbt3VTRd2tJR3PwxoY9ITfwTPGINPNE/view?usp=sharing
