@@ -1,26 +1,37 @@
+import java.util.*;
+
 class Movie {
     static int countCreation = 0;
     static int countDeletion = 0;
     int duration;
     String name;
     double rating;
+    Scanner scn;
 
-    public Movie(int duration, String name, double rating) {
+    public Movie(int duration, String name, double rating) throws Exception {
         System.out.println("Memory Allocation - Initialization of Variables");
         countCreation++;
+
         this.duration = duration;
         this.name = name;
         this.rating = rating;
+
+        // System Resources Couple
+        scn = new Scanner(System.in);
     }
 
     @Override
     public void finalize() throws Throwable {
-        System.out.println("Memory Deallocation");
+        System.out.println("Clean Up Code");
+        // if JVM is calling finalize: memory dellocation
+        // System Resources Decouple: Clean Up Code
+        scn.close();
         countDeletion++;
     }
 }
 
 class Solution {
+
     public static void primitiveVariables() {
         System.out.println("Primitive & Reference Variables Creation / Allocation");
         // Function Scope Local Variables:
@@ -43,7 +54,7 @@ class Solution {
         System.out.println("Primitive & Reference Variables Deletion / Deallocation");
     }
 
-    public static void automaticGarbageCollection() {
+    public static void automaticGarbageCollection() throws Exception {
         Movie a1 = new Movie(180, " Endgame", 4.5);
         // Object cannot be deleted because it is referenced
 
@@ -65,7 +76,18 @@ class Solution {
         System.out.println(Movie.countCreation + " " + Movie.countDeletion);
     }
 
-    public static void main(String[] args) {
-        automaticGarbageCollection();
+    public static void finalizeDemo() throws Exception {
+        Movie a = new Movie(180, " Endgame", 4.5);
+        try {
+            a.finalize();
+        } catch (Throwable e) {
+        }
+
+        System.out.println(a); // It will still print the object: Object is still there in memory
+        // Object Deallocation due to Developer's finalize Call is not happening
+    }
+
+    public static void main(String[] args) throws Exception {
+        finalizeDemo();
     }
 }
