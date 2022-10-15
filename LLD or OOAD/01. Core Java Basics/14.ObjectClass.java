@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Movie implements Cloneable {
     String name = "Avengers Endgame";
     int duration = 180;
