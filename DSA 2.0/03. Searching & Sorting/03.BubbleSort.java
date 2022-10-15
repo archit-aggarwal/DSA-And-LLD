@@ -3,6 +3,7 @@
 // Time: Best Case: O(N^2) Without Optimization, Avg Case/Worst Case: O(N ^ 2)
 // Space: O(1) Constant Extra Space: Inplace Sorting
 // Stable Sorting Algorithm
+
 class Solution1 {
     public static void swap(int[] arr, int i1, int i2) {
         int temp = arr[i1];
