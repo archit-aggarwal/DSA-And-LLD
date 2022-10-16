@@ -8,7 +8,7 @@ class Movie {
     double rating;
     Scanner scn;
 
-    public Movie(int duration, String name, double rating) throws Exception {
+    public Movie(int duration, String name, double rating) {
         System.out.println("Memory Allocation - Initialization of Variables");
         countCreation++;
 
@@ -21,12 +21,13 @@ class Movie {
     }
 
     @Override
-    public void finalize() throws Throwable {
+    protected void finalize() throws Throwable {
         System.out.println("Clean Up Code");
         // if JVM is calling finalize: memory dellocation
         // System Resources Decouple: Clean Up Code
         scn.close();
         countDeletion++;
+        System.out.println("Memory Deallocation");
     }
 }
 
@@ -76,18 +77,37 @@ class Solution {
         System.out.println(Movie.countCreation + " " + Movie.countDeletion);
     }
 
+    @SuppressWarnings("Deprecated")
     public static void finalizeDemo() throws Exception {
         Movie a = new Movie(180, " Endgame", 4.5);
         try {
             a.finalize();
         } catch (Throwable e) {
+            System.out.println(e.getMessage());
         }
 
         System.out.println(a); // It will still print the object: Object is still there in memory
         // Object Deallocation due to Developer's finalize Call is not happening
     }
 
+    public static void gcDemo() throws Exception {
+        Movie a1 = new Movie(180, " Endgame", 4.5);
+        // Object cannot be deleted because it is referenced
+
+        Movie a2 = new Movie(150, "Infinity War", 4.2);
+        a2 = null; // 1. Nulling the Reference
+
+        Runtime.getRuntime().gc();
+
+        Movie a3 = new Movie(120, "Thor", 2.5);
+        a3 = a1; // 2. Updating the Reference
+
+        // Forceful Execution of Garbage Collection
+        System.gc();
+
+    }
+
     public static void main(String[] args) throws Exception {
-        finalizeDemo();
+        gcDemo();
     }
 }

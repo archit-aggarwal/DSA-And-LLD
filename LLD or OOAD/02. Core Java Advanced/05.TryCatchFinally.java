@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.*;
 
-public class Solution {
+class Solution {
     public static void calculator() {
         System.out.println("Starting Normally");
         try {
@@ -61,7 +61,7 @@ public class Solution {
         }
     }
 
-    public static void multipleCatch() {
+    public static void multipleCatch(String[] args) {
         try {
             Integer a = Integer.parseInt(args[0]);
             Integer b = Integer.parseInt(args[1]);
