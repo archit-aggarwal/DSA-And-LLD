@@ -14,13 +14,13 @@ class Movie implements Cloneable {
     }
 
     @Override
-    public boolean equals(Object other) {
-        return this.name.equals(((Movie) other).name);
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public boolean equals(Object other) {
+        return this.name.equals(((Movie) other).name);
     }
 
     @Override
@@ -30,6 +30,7 @@ class Movie implements Cloneable {
     }
 
     @Override
+    @SuppressWarnings("Deprecated")
     protected void finalize() throws Throwable {
         // Deallocation of Resources Holded by Object
         // (Database Connection, File Input/Output Streams, H/W Resources like Camera)
