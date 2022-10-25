@@ -7,10 +7,10 @@ public class App {
     @SuppressWarnings("")
     public static void main(String[] args) {
         UserService users = new UserService();
-        users.addUser(new User("u1", "Archit", "archit@gmail.com", "9319117889"));
-        users.addUser(new User("u2", "Arman", "arman@gmail.com", "9876543210"));
-        users.addUser(new User("u3", "Tejasvi", "tejasvi@gmail.com", "7856839572"));
-        users.addUser(new User("u4", "Hrishik", "hrishik@gmail.com", "8811223344"));
+        users.addUser(new User("u1", "Sita", "Sita@gmail.com", "9996567890"));
+        users.addUser(new User("u2", "Shyam", "Shyam@gmail.com", "9876543210"));
+        users.addUser(new User("u3", "Ram", "Ram@gmail.com", "7856839572"));
+        users.addUser(new User("u4", "Balram", "Balram@gmail.com", "8811223344"));
 
         Scanner scn = new Scanner(System.in);
 

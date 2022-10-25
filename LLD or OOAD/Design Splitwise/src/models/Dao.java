@@ -33,16 +33,10 @@ public class Dao {
         String debtor = split.getUser();
 
         Map<String, Double> balanceMap = balances.get(creditor);
-        if (!balanceMap.containsKey(debtor)) {
-            balanceMap.put(debtor, 0.0);
-        }
         balanceMap.put(debtor, balanceMap.getOrDefault(debtor, 0.0)
                 + split.getAmount());
 
         balanceMap = balances.get(debtor);
-        if (!balanceMap.containsKey(creditor)) {
-            balanceMap.put(creditor, 0.0);
-        }
         balanceMap.put(creditor, balanceMap.getOrDefault(creditor, 0.0)
                 - split.getAmount());
     }
