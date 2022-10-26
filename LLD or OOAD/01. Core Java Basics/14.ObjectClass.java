@@ -87,6 +87,9 @@ class Solution {
 
         Movie a2 = (Movie) (a1.clone());
         System.out.println(a2);
+
+        System.out.println(a1 == a2);
+        System.out.println(a1.name == a2.name);
     }
 
     public static void hashCodeDemo() {
@@ -107,6 +110,6 @@ class Solution {
         // getClassDemo();
         // equalsDemo();
         // hashCodeDemo();
-        // cloneDemo();
+        cloneDemo();
     }
 }

@@ -49,6 +49,7 @@ class MovieRatingIncreasingComparator implements Comparator<Movie> {
     }
 }
 
+@FunctionalInterface
 interface Operation {
     public int applyOp(int a, int b);
 }
