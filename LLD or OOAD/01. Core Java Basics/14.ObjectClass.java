@@ -1,4 +1,6 @@
-class Movie implements Cloneable {
+
+// class Movie extends Object{
+class Movie {
     String name = "Avengers Endgame";
     int duration = 180;
     double ratings = 4.5;
@@ -46,9 +48,9 @@ class Movie implements Cloneable {
     }
 }
 
+@SuppressWarnings("all")
 class Solution {
 
-    @SuppressWarnings("rawtypes")
     public static void getClassDemo() {
         Object obj1 = new Object();
         Class cobj1 = obj1.getClass();
@@ -110,6 +112,8 @@ class Solution {
         // getClassDemo();
         // equalsDemo();
         // hashCodeDemo();
-        cloneDemo();
+        // cloneDemo();
+
+        Object obj = new Object();
     }
 }
