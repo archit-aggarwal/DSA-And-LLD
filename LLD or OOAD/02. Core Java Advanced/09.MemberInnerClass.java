@@ -1,6 +1,10 @@
 class Outer {
     private String outerData = "Outer";
 
+    Outer() {
+        System.out.println(this.outerData);
+    }
+
     public String getOuterData() {
         return outerData;
     }
@@ -12,8 +16,21 @@ class Outer {
         System.out.println(outerStaticData);
     }
 
+    public void outerFun2() {
+        System.out.println(Inner.innerStaticData);
+        System.out.println(outerStaticData);
+        System.out.println(outerData);
+
+        Inner obj = new Inner();
+        System.out.println(obj.innerData);
+    }
+
     class Inner {
         String innerData = "Inner";
+
+        Inner() {
+            System.out.println(this.innerData);
+        }
 
         public String getInnerData() {
             return innerData;
@@ -24,6 +41,15 @@ class Outer {
         public static void innerFun() {
             System.out.println(innerStaticData);
             System.out.println(outerStaticData);
+        }
+
+        public void innerFun2() {
+            System.out.println(innerStaticData);
+            System.out.println(outerStaticData);
+            System.out.println(innerData);
+            System.out.println(outerData); 
+            // Non Static Inner Class -> Outer Class Object Needed
+            // Outer Non Static Variables are Accessible
         }
     }
 }
@@ -38,5 +64,8 @@ class Driver {
 
         Outer.outerFun();
         Outer.Inner.innerFun();
+
+        outerobj.outerFun2();
+        innerobj.innerFun2();
     }
 }
