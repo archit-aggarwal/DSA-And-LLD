@@ -36,9 +36,9 @@ class Child extends Parent {
     }
 }
 
-public class Annotations {
+class Driver {
 
-    // @SuppressWarnings("unchecked")
+    @SuppressWarnings("all")
     public static void main(String[] args) {
         KeypadPhone.touchKeypad();
         // Warning Issued: Not recommended to use now

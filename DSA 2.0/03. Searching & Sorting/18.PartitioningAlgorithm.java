@@ -46,6 +46,7 @@ class Main {
         int pivot = scn.nextInt();
         partition(arr, pivot);
         print(arr);
+        scn.close();
     }
 
 }
