@@ -1,6 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/binary-array-sorting-1587115620/1
 // Time = O(N), Space = O(1)
 // Single Traversal Approach & Inplace Approach
+
 class Solution {
     static void swap(int[] arr, int left, int right) {
         int temp = arr[left];
