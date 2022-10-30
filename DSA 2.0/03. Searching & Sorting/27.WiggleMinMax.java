@@ -20,8 +20,30 @@ class Solution {
         }
     }
 
+    // Time = O(N), Space = O(1) Inplace Constant
+    public static void quotientRemainder(long[] arr, int n) {
+        long max = 10000001;
+        int left = 0, right = n - 1;
+
+        // Encryption
+        for (int idx = 0; idx < n; idx++) {
+            long oldVal = arr[idx];
+            long newVal = (idx % 2 == 0)
+                    ? arr[right--] % max
+                    : arr[left++] % max;
+
+            arr[idx] = oldVal + (newVal % max) * max;
+        }
+
+        // Decryption
+        for (int idx = 0; idx < n; idx++) {
+            arr[idx] = arr[idx] / max;
+        }
+    }
+
     public static void rearrange(long arr[], int n) {
-        minMaxForm(arr, n);
+        // minMaxForm(arr, n);
+        quotientRemainder(arr, n);
     }
 
 }
