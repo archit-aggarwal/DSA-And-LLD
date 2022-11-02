@@ -131,7 +131,6 @@ class Driver {
             obj2.interrupt();
             obj1.start();
         } catch (Exception e) {
-
         }
     }
 }
