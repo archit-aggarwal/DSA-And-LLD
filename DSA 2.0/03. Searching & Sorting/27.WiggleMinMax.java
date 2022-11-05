@@ -1,7 +1,8 @@
 // https://practice.geeksforgeeks.org/problems/-rearrange-array-alternately-1587115620/1
 
 class Solution {
-    // approach 1: Time = O(N) Assuming Already Sorted, Space = O(N) Not Inplace
+    // approach 1: Time = O(N) Assuming Already Sorted
+    // Space = O(N) Not Inplace
     public static void minMaxForm(long arr[], int n) {
         long[] sorted = new long[n];
         for (int idx = 0; idx < n; idx++)
@@ -20,6 +21,7 @@ class Solution {
         }
     }
 
+    // approach 2: Storing 2 Values at Same Index
     // Time = O(N), Space = O(1) Inplace Constant
     public static void quotientRemainder(long[] arr, int n) {
         long max = 10000001;
