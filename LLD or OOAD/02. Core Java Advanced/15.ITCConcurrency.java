@@ -47,24 +47,28 @@ class Driver {
         User u4 = new User("Gita");
 
         u1.start();
+        u2.start();
+        u3.start();
+        u4.start();
+
         synchronized (u1) {
             u1.wait();
             System.out.println("Remaining Seats : " + User.pvr.availableSeats);
         }
 
-        u2.start();
+        // u2.start();
         synchronized (u2) {
             u2.wait();
             System.out.println("Remaining Seats : " + User.pvr.availableSeats);
         }
 
-        u3.start();
+        // u3.start();
         synchronized (u3) {
             u3.wait();
             System.out.println("Remaining Seats : " + User.pvr.availableSeats);
         }
 
-        u4.start();
+        // u4.start();
         synchronized (u4) {
             u4.wait();
             System.out.println("Remaining Seats : " + User.pvr.availableSeats);
