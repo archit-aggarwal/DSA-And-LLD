@@ -17,6 +17,7 @@ class Solution {
 
         // 2. Form the Sorted Result From Frequency Array
         int[] res = new int[nums.length];
+
         int idx = 0;
         for (int actualIdx = 0; actualIdx < freq.length; actualIdx++) {
             int val = actualIdx + min;
