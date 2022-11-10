@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/first-bad-version/description/
 // Time = O(Log2 N), Space = O(1)
 
-public class Solution extends VersionControl {
+class Solution extends VersionControl {
     public int firstBadVersion(int n) {
         int left = 1, right = n;
 
@@ -15,5 +15,12 @@ public class Solution extends VersionControl {
         }
 
         return left;
+    }
+}
+
+// For No Compilation Errors
+class VersionControl {
+    public boolean isBadVersion(int val) {
+        return false;
     }
 }

@@ -1,4 +1,7 @@
-public class Solution extends GuessGame {
+// https://leetcode.com/problems/guess-number-higher-or-lower/
+// Time = O(log2 N), Space = O(1)
+
+class Solution extends GuessGame {
     public int guessNumber(int n) {
         int left = 1, right = n;
 
@@ -15,5 +18,12 @@ public class Solution extends GuessGame {
         }
 
         return -1;
+    }
+}
+
+// For No Compilation Errors
+class GuessGame {
+    public int guess(int val) {
+        return 0;
     }
 }
