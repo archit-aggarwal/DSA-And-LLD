@@ -43,6 +43,7 @@ class DBConnection {
         this.db = db;
     }
 
+    @SuppressWarnings("all")
     public static void main(String[] args) {
         IDatabase sql = new SQLDatabase();
         DBConnection dbConnection = new DBConnection(sql);
@@ -51,4 +52,3 @@ class DBConnection {
         dbConnection = new DBConnection(mongoose);
     }
 }
-

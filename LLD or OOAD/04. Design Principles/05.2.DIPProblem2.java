@@ -19,6 +19,7 @@ class DBConnection {
         this.db = db;
     }
 
+    @SuppressWarnings("all")
     public static void main(String[] args) {
         SQLDatabase sql = new SQLDatabase();
         DBConnection dbConnection = new DBConnection(sql);
