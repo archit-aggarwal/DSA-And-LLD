@@ -1,4 +1,5 @@
 import java.util.*;
+
 import java.io.*;
 
 // time = O(log2N), Space = O(1)
@@ -6,6 +7,7 @@ import java.io.*;
 // Article GfG: https://www.geeksforgeeks.org/search-almost-sorted-array/
 
 class Main {
+    @SuppressWarnings("all")
     public static void main(String[] args) throws IOException {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
@@ -13,10 +15,12 @@ class Main {
         for (int i = 0; i < n; i++) {
             num[i] = scn.nextInt();
         }
+
         int k = scn.nextInt();
         System.out.println(solve(num, k));
     }
 
+    @SuppressWarnings("all")
     public static int solve(int[] arr, int target) {
         int left = 0, right = arr.length - 1;
         while (left <= right) {
