@@ -1,5 +1,3 @@
-import java.lang.System.Logger;
-
 // Solution 1:
 // class LoggerService {
 //     private static LoggerService instance = new LoggerService();
@@ -94,6 +92,14 @@ class CustomThread extends Thread {
     }
 }
 
+enum LoggerServiceEnum {
+    INSTANCE;
+
+    public void log(String str) {
+        System.out.println(str);
+    }
+}
+
 class Client {
     public static void multithreaded() {
         CustomThread t1 = new CustomThread();
@@ -101,6 +107,12 @@ class Client {
 
         CustomThread t2 = new CustomThread();
         t2.start();
+    }
+
+    public static void loggerEnum() {
+        LoggerServiceEnum logger = LoggerServiceEnum.INSTANCE;
+        logger.log("CPU Utilization Over 75%");
+        logger.log("RAM Under 25%");
     }
 
     public static void main(String[] args) {
@@ -113,5 +125,6 @@ class Client {
         System.out.println(log1 == log2); // true
 
         // multithreaded();
+        // loggerEnum();
     }
 }
