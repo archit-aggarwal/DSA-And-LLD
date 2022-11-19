@@ -2,6 +2,10 @@
 // Binary Search on Answer
 // Time = O(N * Log N), Space = O(1)
 
+// More Links to Submit:
+// Split Array Largest Sum: https://leetcode.com/problems/split-array-largest-sum/
+// Capacity to Ship Packages: https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+
 class Solution {
     // Can I Distribute all books to the totalStudents within maximum load
     public static boolean isPossible(int[] pages, int maxLoad, int totalStud) {

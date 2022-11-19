@@ -32,7 +32,6 @@ class Solution {
     }
 
     public int paint(int stud, int time, int[] pages) {
-        int books = pages.length;
         long left = maxOfArray(pages); // Someone will have to read the max pages book
         long right = sumOfArray(pages); // Someone might have to read all the books
 
