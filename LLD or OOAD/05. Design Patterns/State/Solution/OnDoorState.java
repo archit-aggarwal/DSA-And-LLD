@@ -8,3 +8,4 @@ public class OnDoorState implements ProductState {
     }
 
 }
+
