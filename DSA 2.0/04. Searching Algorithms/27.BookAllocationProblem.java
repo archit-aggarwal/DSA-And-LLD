@@ -54,4 +54,4 @@ class Solution {
 
         return left;
     }
-};
+}

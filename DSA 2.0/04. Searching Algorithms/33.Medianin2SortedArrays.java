@@ -2,7 +2,6 @@
 // https://leetcode.com/problems/median-of-two-sorted-arrays/description/
 
 // Time = O(log N), Space = O(1)
-// Homework Code
 
 import java.util.*;
 
