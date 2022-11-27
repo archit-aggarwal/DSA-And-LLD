@@ -9,10 +9,8 @@ public abstract class DatabaseFactory {
         this.dataformat = dataformat;
     }
 
-    public void setupDatabase(){
+    public void setupDatabase() {
         // dbConnection.getDB();
         // dataformat.getDataFormat();
     }
 }
-
-
