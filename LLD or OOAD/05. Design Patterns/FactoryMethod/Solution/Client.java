@@ -3,6 +3,7 @@ package FactoryMethod.Solution;
 import java.util.Scanner;
 
 public class Client {
+    @SuppressWarnings("all")
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
 

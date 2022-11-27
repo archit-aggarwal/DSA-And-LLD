@@ -2,7 +2,7 @@ package FactoryMethod.Problem;
 
 import java.util.Scanner;
 
-public class UberService {
+public class Client {
     @SuppressWarnings("all")
     public Vehicle bookCar() {
         Scanner scn = new Scanner(System.in);
@@ -14,6 +14,7 @@ public class UberService {
         else if (passengers <= 3)
             return new Auto();
 
-        else return new Car();
+        else
+            return new Car();
     }
 }
