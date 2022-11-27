@@ -24,4 +24,3 @@ class Solution {
         return res.get(k - 1);
     }
 }
-
