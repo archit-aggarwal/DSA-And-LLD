@@ -4,5 +4,3 @@ public class Student {
     double marks;
     char gender;
 }
-
-

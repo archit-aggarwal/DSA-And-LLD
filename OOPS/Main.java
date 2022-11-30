@@ -1,45 +1,46 @@
 public class Main {
+    public static void swap1(Student x, Student y) {
+        Student z = x;
+        x = y;
+        y = z;
+    }
+
+    public static void swap2(Student x, Student y) {
+        Student z = new Student();
+        z.marks = x.marks;
+        z.gender = x.gender;
+
+        x = y;
+        y = z;
+    }
+
+    public static void swap3(Student x, Student y) {
+        Student z = x;
+
+        x.marks = y.marks;
+        x.gender = y.gender;
+
+        y.marks = z.marks;
+        y.gender = z.gender;
+    }
+
     public static void main(String[] args) {
         Student s1 = new Student();
-
-        // Set the properties
-        s1.name = "Archit";
-        s1.rollNo = 1;
-        s1.gender = 'M';
         s1.marks = 100;
-
-        // Get the properites
-        System.out.println(s1.name);
-        System.out.println(s1.rollNo);
-        System.out.println(s1.gender);
-        System.out.println(s1.marks);
+        s1.gender = 'M';
 
         Student s2 = new Student();
-
-        s2.name = "Babita";
-        s2.rollNo = 2;
+        s2.marks = 75;
         s2.gender = 'F';
-        s2.marks = 30;
 
-        System.out.println(s2.name);
-        System.out.println(s2.rollNo);
-        System.out.println(s2.gender);
-        System.out.println(s2.marks);
+        System.out.println(s1.marks + ", " + s1.gender);
+        System.out.println(s2.marks + ", " + s2.gender);
 
-        Student[] arr = new Student[3];
+        // swap1(s1, s2);
+        // swap2(s1, s2);
+        swap3(s1, s2);
 
-        arr[0] = s1;
-        arr[1] = s2;
-
-        arr[2] = new Student();
-        arr[2].name = "Chetan";
-        arr[2].rollNo = 3;
-        arr[2].gender = 'M';
-        arr[2].marks = 95;
-
-        System.out.println(arr[2].name);
-        System.out.println(arr[2].rollNo);
-        System.out.println(arr[2].gender);
-        System.out.println(arr[2].marks);
+        System.out.println(s1.marks + ", " + s1.gender);
+        System.out.println(s2.marks + ", " + s2.gender);
     }
 }
