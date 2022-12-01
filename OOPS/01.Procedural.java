@@ -1,4 +1,4 @@
-public class Concept1 {
+class Concept1 {
     public static void fun(Student s) {
         System.out.println(s.marks);
         s.marks = 99;

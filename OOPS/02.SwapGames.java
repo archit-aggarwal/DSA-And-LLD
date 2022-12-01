@@ -1,4 +1,4 @@
-public class Main {
+class Concept2 {
     public static void swap1(Student x, Student y) {
         Student z = x;
         x = y;
