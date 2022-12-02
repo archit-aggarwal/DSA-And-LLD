@@ -1,27 +1,17 @@
 public class Student {
+    // Properties: Private: Security
     private int rollNo;
     private String name;
     private double marks;
     private char gender;
+    String[] subjects;
 
-    // Non-Parameterized or Default Explicit Constructor
-    public Student() {
+    public void setDefaultProperties(int n) {
         rollNo = 1;
         name = "Anonymous";
         marks = 100.0;
         gender = 'N';
-    }
-
-    // Non-Parameterized or Default Implicit Empty Constructor
-    // Provided by Compiler
-    // public Student(){}
-
-    // // Parameterized Constructor
-    public Student(int newRollNo, String newName, double newMarks, char newGender) {
-        rollNo = newRollNo;
-        name = newName;
-        marks = newMarks;
-        gender = newGender;
+        subjects = new String[n];
     }
 
     // Getters: Public
@@ -46,8 +36,9 @@ public class Student {
         rollNo = newRollNo;
     }
 
-    public void setMarks(double newMarks) {
-        marks = newMarks;
+    public void setMarks(double newMarks, String password) {
+        if (password.equals("1234jaijai") == true)
+            marks = newMarks;
     }
 
     public void setGender(char newGender) {
@@ -57,4 +48,5 @@ public class Student {
     public void setName(String newName) {
         name = newName;
     }
+
 }
