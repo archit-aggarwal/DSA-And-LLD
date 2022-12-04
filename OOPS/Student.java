@@ -4,26 +4,6 @@ public class Student {
     private double marks;
     private char gender;
 
-    // Non-Parameterized or Default Explicit Constructor
-    public Student() {
-        rollNo = 1;
-        name = "Anonymous";
-        marks = 100.0;
-        gender = 'N';
-    }
-
-    // Non-Parameterized or Default Implicit Empty Constructor
-    // Provided by Compiler
-    // public Student(){}
-
-    // // Parameterized Constructor
-    public Student(int newRollNo, String newName, double newMarks, char newGender) {
-        rollNo = newRollNo;
-        name = newName;
-        marks = newMarks;
-        gender = newGender;
-    }
-
     // Getters: Public
     public int getRollNo() {
         return rollNo;
@@ -56,5 +36,10 @@ public class Student {
 
     public void setName(String newName) {
         name = newName;
+    }
+
+    public Student(Student other) {
+        // rollNo = other.rollNo;
+        rollNo = other.getRollNo();
     }
 }
