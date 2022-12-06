@@ -1,8 +1,11 @@
+import java.util.*;
+
 public class Student {
     private int rollNo;
     private String name;
     private double marks;
     private char gender;
+    ArrayList<String> subjects = new ArrayList<>();
 
     // Getters: Public
     public int getRollNo() {
@@ -38,8 +41,18 @@ public class Student {
         name = newName;
     }
 
+    // Copy Constructor
     public Student(Student other) {
-        // rollNo = other.rollNo;
-        rollNo = other.getRollNo();
+        rollNo = other.rollNo;
+        marks = other.marks;
+        name = other.name;
+        gender = other.gender;
+    }
+
+    public Student() {
+        rollNo = 1;
+        marks = 100;
+        name = "Anonymous";
+        gender = 'N';
     }
 }
