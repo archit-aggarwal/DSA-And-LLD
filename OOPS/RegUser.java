@@ -2,6 +2,18 @@ public class RegUser extends User {
     private String emailId;
     private long phoneNo;
 
+    public RegUser() {
+        super(); // Parent's
+        System.out.println("Registered User Constructor");
+    }
+
+    public RegUser(String name,
+            char gender, String emailId, long phoneNo) {
+        super(name, gender);
+        this.emailId = emailId;
+        this.phoneNo = phoneNo;
+    }
+
     public String getEmailId() {
         return emailId;
     }
@@ -27,5 +39,19 @@ public class RegUser extends User {
 
         System.out.println("Authenticated User");
         System.out.println("View Free Shows");
+    }
+
+    // Overrided Function
+    public void advertisement() {
+        System.out.println("Less Ads");
+    }
+
+    // This is not overriding
+    public static void staticFun() {
+        System.out.println("This is child's Static fun");
+    }
+
+    // This is not overriding
+    public void privateFun() {
     }
 }

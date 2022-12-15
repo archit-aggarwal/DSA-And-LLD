@@ -2,6 +2,11 @@ public class SubscribedUser extends RegUser {
     private String plan;
     private String validity;
 
+    public SubscribedUser() {
+        super();
+        System.out.println("Subscribed User Constructor");
+    }
+
     public String getPlan() {
         return plan;
     }

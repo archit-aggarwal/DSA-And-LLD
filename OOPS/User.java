@@ -1,6 +1,15 @@
 public class User {
-    private  String name;
+    private String name;
     private char gender;
+
+    public User() {
+        System.out.println("User Constructor");
+    }
+
+    public User(String name, char gender) {
+        this.name = name;
+        this.gender = gender;
+    }
 
     public String getName() {
         return name;
@@ -22,5 +31,18 @@ public class User {
         System.out.println("Unauthenticatprivateed user");
         System.out.println("View Show Listings");
     }
-}
 
+    // overriden function
+    public void advertisement() {
+        System.out.println("Many Ads");
+    }
+
+    // Always Statically Binded
+    public static void staticFun() {
+        System.out.println("This is Parent's Static Fun");
+    }
+
+    private void privateFun() {
+        
+    }
+}
