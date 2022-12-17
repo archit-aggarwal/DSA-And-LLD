@@ -1,10 +1,11 @@
 public class RegUser extends User {
     private String emailId;
     private long phoneNo;
+    String address = "Delhi";
 
     public RegUser() {
         super(); // Parent's
-        System.out.println("Registered User Constructor");
+        // System.out.println("Registered User Constructor");
     }
 
     public RegUser(String name,
@@ -51,7 +52,4 @@ public class RegUser extends User {
         System.out.println("This is child's Static fun");
     }
 
-    // This is not overriding
-    public void privateFun() {
-    }
 }

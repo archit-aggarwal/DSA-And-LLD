@@ -1,61 +1,68 @@
 public class App {
     public static void main(String[] args) {
         // User u1 = new User();
+        // System.out.println(u1.name + ", "
+        // + u1.gender + ", " + u1.address);
 
-        // u1.setName("Hrishi");
-        // u1.setGender('M');
-
-        // System.out.print(u1.getName() + " ");
-        // System.out.print(u1.getGender());
-        // u1.viewShowListing();
+        // u1.viewFreeShow();
+        // u1.advertisement();
 
         // RegUser u2 = new RegUser();
-        // u2.setName("Archit");
-        // u2.setGender('M');
-        // u2.setEmailId("archit.aggarwal023@gmail.com");
-        // u2.setPhoneNo(9319117889l);
+        // System.out.println(u2.name + ", " + u2.gender + ", "
+        // + u2.email + ", " + u2.phoneNo);
+        // System.out.println(u2.address); // delhi (child)
+        // u2.superAddress(); // india (parent)
 
-        // System.out.print(u2.getName() + " ");
-        // System.out.print(u2.getGender() + " ");
-        // System.out.print(u2.getEmailId() + " ");
-        // System.out.print(u2.getPhoneNo());
+        // u2.advertisement(); // overrided (less ads)
+        // u2.superAdv(); // overriden (more ads)
 
-        // u2.viewShowListing();
-        // u2.viewFreeShows();
+        User u3 = new RegUser();
+        System.out.println(u3.name + ", " + u3.gender
+                + ", " + u3.address);
 
-        // SubscribedUser u3 = new SubscribedUser();
-        // u3.setName("Archit");
-        // u3.setGender('M');
-        // u3.setEmailId("archit.aggarwal023@gmail.com");
-        // u3.setPhoneNo(9319117889l);
-        // u3.setPlan("Select");
-        // u3.setValidity("1 year");
-        // u3.viewPaidShows();
-        // u3.viewFreeShows();
-        // u3.viewShowListing();
+        u3.viewFreeShow(); // only parent
+        u3.advertisement(); // overrided function
+        // u3.viewPaidShow(); // only child: not available
 
-        // Admin u4 = new Admin();
-        // u4.setName("Archit");
-        // u4.setGender('M');
-        // u4.setEmailId("archit.aggarwal@hotstar.com");
-        // u4.setPhoneNo(9319117889l);
-        // u4.setAdminId("EMP01");
-        // u4.editShow();
+        RegUser u4 = (RegUser) u3;
+        u4.viewPaidShow();
+        System.out.println(u4.email + ", " + u4.phoneNo);
+    }
+}
 
-        User u1 = new User();
-        u1.advertisement();
+class User {
+    String name = "Archit Aggarwal";
+    char gender = 'M';
+    String address = "India";
 
-        RegUser u2 = new RegUser();
-        u2.advertisement();
+    void viewFreeShow() {
+        System.out.println("View Free Shows");
+    }
 
-        SubscribedUser u3 = new SubscribedUser();
-        u3.advertisement();
+    void advertisement() {
+        System.out.println("Many Ads");
+    }
+}
 
-        User.staticFun();
-        RegUser.staticFun();
+class RegUser extends User {
+    String email = "archit.aggarwal023@gmail.com";
+    String phoneNo = "9319117889";
+    String address = "Delhi";
 
-        // User u4 = new RegUser();
-        // u4.advertisement();
-        // u4.staticFun();
+    void viewPaidShow() {
+        System.out.println("View Paid Shows");
+    }
+
+    void advertisement() {
+        System.out.println("Less Ads");
+    }
+
+    void superAddress() {
+        System.out.println(super.address);
+        // india -> indirectly accessible
+    }
+
+    void superAdv() {
+        super.advertisement(); // Many Ads
     }
 }

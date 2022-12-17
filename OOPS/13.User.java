@@ -1,9 +1,10 @@
 public class User {
     private String name;
     private char gender;
+    String address = "India";
 
     public User() {
-        System.out.println("User Constructor");
+        // System.out.println("User Constructor");
     }
 
     public User(String name, char gender) {
@@ -28,7 +29,7 @@ public class User {
     }
 
     public void viewShowListing() {
-        System.out.println("Unauthenticatprivateed user");
+        System.out.println("Unauthenticated user");
         System.out.println("View Show Listings");
     }
 
@@ -40,9 +41,5 @@ public class User {
     // Always Statically Binded
     public static void staticFun() {
         System.out.println("This is Parent's Static Fun");
-    }
-
-    private void privateFun() {
-        
     }
 }
