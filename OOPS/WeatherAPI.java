@@ -56,14 +56,23 @@ class Weather extends WeatherAPI {
 }
 
 interface WeatherInterface {
+    String day = "24 hours"; // final, static
+
     public void setTemperature(String city);
 
     public void setHumidity(String city);
 }
 
-// Interface: Blue Print of a Class
+// Interface
+// 1) Blue Print of a Class
+// 2) All Functions are abstract by default
+// 3) All properties are final & static
+// 4) We cannot create objects of interface
+// 5) They do not have constructors and this keyword
+// 6) There will be no inheritance, but dependency will be there
 
 class WeatherReport implements WeatherInterface {
+
     public void setHumidity(String city) {
         System.out.println("Set the Humidity of" + city);
     }
