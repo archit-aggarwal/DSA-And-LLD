@@ -25,10 +25,10 @@ void file_input_output()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
-#ifndef ONLINE_JUDGE
+	#ifndef ONLINE_JUDGE
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
-#endif
+	#endif
 }
 
 ll gcd(ll a, ll b)
@@ -213,7 +213,7 @@ ll* tree;
 void build(vector<ll> &arr, ll i, ll l, ll r)
 {
 	if (l == r)
-	{ tree[i] = arr[l]; return; }
+		{ tree[i] = arr[l]; return; }
 	if (l > r) return;
 	ll mid = l + (r - l) / 2;
 	build(arr, 2 * i + 1, l, mid);
@@ -239,8 +239,7 @@ ll query(ll i, ll s, ll e, ll qs, ll qe)
 void update(ll idx, ll s, ll e, ll i, ll val)
 {
 	if (i < s || i > e) return;
-	if (s == e)
-	{
+	if (s == e){	
 		tree[idx] = val;
 		return;
 	}
@@ -258,7 +257,7 @@ int tree[10005] = {0};
 int lazy[10005] = {0};
 
 void update(int si, int ss, int se, int us,
-            int ue, int diff)
+	int ue, int diff)
 {
 	if (lazy[si] != 0)
 	{
@@ -316,7 +315,7 @@ int query(int ss, int se, int qs, int qe, int si)
 
 	int mid = (ss + se) / 2;
 	return query(ss, mid, qs, qe, 2 * si + 1)
-	       + query(mid + 1, se, qs, qe, 2 * si + 2);
+	+ query(mid + 1, se, qs, qe, 2 * si + 2);
 }
 
 // Query Call -> [qs, qe] Both Included
