@@ -8,7 +8,7 @@ public class Main {
 
         public FastReader() {
             br = new BufferedReader(
-                new InputStreamReader(System.in));
+                    new InputStreamReader(System.in));
         }
 
         String next() {
@@ -72,14 +72,14 @@ public class Main {
 
     static FastReader in = new FastReader();
     static FastWriter out = new FastWriter();
-
     static {
         if (System.getProperty("ONLINE_JUDGE") == null) {
             try {
                 System.setOut(new PrintStream(
-                    new FileOutputStream("output.txt")));
+                        new FileOutputStream("output.txt")));
                 System.setIn(new FileInputStream("input.txt"));
             } catch (Exception e) {
+                System.out.println(e);
             }
         }
     }
@@ -97,45 +97,48 @@ public class Main {
 
     }
 
-    static class Pair{
+    static class Pair {
         int x, y;
-        Pair(int first, int second){
+
+        Pair(int first, int second) {
             this.x = first;
             this.y = second;
         }
-        Pair(){}
+
+        Pair() {
+        }
     }
 
     public static void solve() throws Exception {
-        // int n = in.nextInt();
+        int n = in.nextInt();
 
         // int[] arr = new int[n];
         // Arrays.fill(arr, -1);
 
         // for(int idx = 0; idx < n; idx++){
-        //     out.print(arr[idx] + " ");
-        //     arr[idx] = in.nextInt();
-        //     out.print(arr[idx] + " ");
+        // out.print(arr[idx] + " ");
+        // arr[idx] = in.nextInt();
+        // out.print(arr[idx] + " ");
         // }
 
         // int[][] points = new int[n][2];
 
-
         Pair[] points = new Pair[n];
 
-        for(int idx = 0; idx < n; idx++){
-            points[idx] = new Pair(); 
+        for (int idx = 0; idx < n; idx++) {
+            points[idx] = new Pair();
             points[idx].x = in.nextInt();
             points[idx].y = in.nextInt();
 
             int ceil = points[idx].x / points[idx].y;
-            if(points[idx].x % points[idx].y != 0) ceil++;
+            if (points[idx].x % points[idx].y != 0)
+                ceil++;
             out.println(ceil + " ");
         }
-
 
         out.println(Integer.MAX_VALUE);
         out.println(Integer.MIN_VALUE);
         out.println(Long.MAX_VALUE);
 
     }
+}

@@ -92,11 +92,12 @@ public class Main {
             }
             out.close();
         } catch (Exception e) {
+            System.out.println(e);
         }
 
     }
 
-    public static void solve() {
+    public static void solve() throws Exception {
 
     }
 }
