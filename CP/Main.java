@@ -8,7 +8,7 @@ public class Main {
 
         public FastReader() {
             br = new BufferedReader(
-                    new InputStreamReader(System.in));
+                new InputStreamReader(System.in));
         }
 
         String next() {
@@ -76,10 +76,9 @@ public class Main {
         if (System.getProperty("ONLINE_JUDGE") == null) {
             try {
                 System.setOut(new PrintStream(
-                        new FileOutputStream("output.txt")));
+                    new FileOutputStream("output.txt")));
                 System.setIn(new FileInputStream("input.txt"));
             } catch (Exception e) {
-                System.out.println(e);
             }
         }
     }
