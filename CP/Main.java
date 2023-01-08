@@ -72,6 +72,7 @@ public class Main {
 
     static FastReader in = new FastReader();
     static FastWriter out = new FastWriter();
+
     static {
         if (System.getProperty("ONLINE_JUDGE") == null) {
             try {
@@ -79,6 +80,7 @@ public class Main {
                     new FileOutputStream("output.txt")));
                 System.setIn(new FileInputStream("input.txt"));
             } catch (Exception e) {
+                System.out.println(e);
             }
         }
     }
@@ -122,22 +124,23 @@ public class Main {
 
         // int[][] points = new int[n][2];
 
-        Pair[] points = new Pair[n];
+        // Pair[] points = new Pair[n];
 
-        for (int idx = 0; idx < n; idx++) {
-            points[idx] = new Pair();
-            points[idx].x = in.nextInt();
-            points[idx].y = in.nextInt();
+        // for (int idx = 0; idx < n; idx++) {
+        //     points[idx] = new Pair();
+        //     points[idx].x = in.nextInt();
+        //     points[idx].y = in.nextInt();
 
-            int ceil = points[idx].x / points[idx].y;
-            if (points[idx].x % points[idx].y != 0)
-                ceil++;
-            out.println(ceil + " ");
-        }
+        //     int ceil = points[idx].x / points[idx].y;
+        //     if (points[idx].x % points[idx].y != 0)
+        //         ceil++;
+        //     out.println(ceil + " ");
+        // }
 
-        out.println(Integer.MAX_VALUE);
-        out.println(Integer.MIN_VALUE);
-        out.println(Long.MAX_VALUE);
+        // out.println(Integer.MAX_VALUE);
+        // out.println(Integer.MIN_VALUE);
+        // out.println(Long.MAX_VALUE);
 
+        
     }
 }
