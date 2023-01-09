@@ -1,3 +1,6 @@
+// https://leetcode.com/problems/remove-k-digits/description/
+// Time = O(N), Space = O(1)
+
 class Solution {
     public String removeKdigits(String num, int k) {
         StringBuilder res = new StringBuilder();
