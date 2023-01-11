@@ -29,3 +29,25 @@ class Solution {
         return -1;
     }
 }
+
+// Time - O(N), Space - O(1)
+
+class Solution2 {
+    public int canCompleteCircuit(int[] gas, int[] cost) {
+        int deficit = 0, fuel = 0, start = 0;
+
+        for (int idx = 0; idx < gas.length; idx++) {
+            fuel += gas[idx] - cost[idx];
+
+            if (fuel < 0) {
+                start = idx + 1;
+                deficit += -fuel;
+                fuel = 0;
+            }
+        }
+
+        if (fuel >= deficit)
+            return start;
+        return -1;
+    }
+}
