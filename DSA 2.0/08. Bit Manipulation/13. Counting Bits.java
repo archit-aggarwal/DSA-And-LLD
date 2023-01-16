@@ -5,9 +5,9 @@ class Solution {
         int[] res = new int[n + 1];
 
         // Approach 1: O(N * log N): Bitmasking
-        // for(int idx = 0; idx <= n; idx++){
-        // res[idx] = Integer.bitCount(idx);
-        // }
+        for (int idx = 0; idx <= n; idx++) {
+            res[idx] = Integer.bitCount(idx);
+        }
 
         // Approach 2: O(N): DP With Bitmasking
         for (int idx = 1; idx <= n; idx++) {
@@ -18,3 +18,4 @@ class Solution {
         return res;
     }
 }
+
