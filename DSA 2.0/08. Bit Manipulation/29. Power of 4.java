@@ -14,4 +14,7 @@ class Solution {
         return (setbits == 1);
         // power of 4 should be power of 2
     }
+
+    // Approach 2
+    // return ((n & (n - 1)) == 0) && (n % 3 == 1);
 }
