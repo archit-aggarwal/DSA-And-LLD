@@ -27,3 +27,31 @@ class Solution1 {
         return res;
     }
 }
+
+// Approach 2: Item chooses the position
+// Time = O(N!), Space = O(N)
+
+class Solution2 {
+    List<List<Integer>> res = new ArrayList<>();
+
+    public void permute(int i, List<Integer> output) {
+        if (i == output.size()) {
+            res.add(new ArrayList<>(output));
+            return;
+        }
+
+        for (int j = 0; j <= i; j++) {
+            Collections.swap(output, i, j);
+            permute(i + 1, output);
+            Collections.swap(output, i, j);
+        }
+    }
+
+    public List<List<Integer>> permute(int[] nums) {
+        List<Integer> output = new ArrayList<>();
+        for (int val : nums)
+            output.add(val);
+        permute(0, output);
+        return res;
+    }
+}
