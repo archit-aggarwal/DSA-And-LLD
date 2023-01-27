@@ -18,3 +18,24 @@ class Solution {
         return count;
     }
 }
+
+// Using BitSet: Space Optimization: O(N / 8)
+class Solution2 {
+    public int countPrimes(int n) {
+        if (n <= 2)
+            return 0;
+        BitSet vis = new BitSet(n + 1);
+        vis.set(2, n + 1);
+
+        int count = 0;
+        for (long i = 2; i < n; i++) {
+            if (vis.get((int) i) == false)
+                continue;
+            count++;
+            for (long j = i * i; j < n; j += i)
+                vis.clear((int) j);
+        }
+
+        return count;
+    }
+}
