@@ -26,10 +26,12 @@ class Solution {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
         for (int N : arr) {
             ArrayList<Integer> primeFactors = new ArrayList<>();
+
             while (N != 1) {
                 primeFactors.add(lpf[N]);
                 N /= lpf[N];
             }
+
             res.add(primeFactors);
         }
         return res;

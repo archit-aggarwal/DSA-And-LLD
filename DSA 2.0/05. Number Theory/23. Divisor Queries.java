@@ -1,14 +1,16 @@
 import java.util.*;
 import java.io.*;
+// https://www.spoj.com/problems/DIVSUM/
 
-public class Solve {
+// Time = O(NlogN + Q), Space = O(N)
+class Main {
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 
         public FastReader() {
             br = new BufferedReader(
-                new InputStreamReader(System.in));
+                    new InputStreamReader(System.in));
         }
 
         String next() {
@@ -73,18 +75,6 @@ public class Solve {
     static FastReader scn = new FastReader();
     static FastWriter out = new FastWriter();
 
-    static {
-        if (System.getProperty("ONLINE_JUDGE") == null) {
-            try {
-                System.setOut(new PrintStream(
-                    new FileOutputStream("output.txt")));
-                System.setIn(new FileInputStream("input.txt"));
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        }
-    }
-
     public static void main(String[] args) {
         try {
             solve();
@@ -93,22 +83,22 @@ public class Solve {
             System.out.println(e);
         }
 
-    }   
+    }
 
     public static void solve() throws Exception {
         int n = 500000;
         long[] factors = new long[n + 1];
 
-        for(long i=1; i<=n; i++){
-            for(long j=2*i;j<=n; j+=i){
-                factors[(int)j] += i;
+        for (long i = 1; i <= n; i++) {
+            for (long j = 2 * i; j <= n; j += i) {
+                factors[(int) j] += i;
             }
         }
 
         int t = scn.nextInt();
-        while(t-- > 0){
+        while (t-- > 0) {
             int i = scn.nextInt();
             out.println(factors[i]);
         }
-    }   
+    }
 }
