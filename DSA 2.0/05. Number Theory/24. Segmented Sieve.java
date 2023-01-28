@@ -1,14 +1,17 @@
+// https://www.spoj.com/problems/PRIME1/
+
 import java.util.*;
 import java.io.*;
 
-public class Solve {
+// Time = O(Q * (R - L) + Root R) ACC, Space = O(R - L)
+class Main {
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 
         public FastReader() {
             br = new BufferedReader(
-                new InputStreamReader(System.in));
+                    new InputStreamReader(System.in));
         }
 
         String next() {
@@ -77,7 +80,7 @@ public class Solve {
         if (System.getProperty("ONLINE_JUDGE") == null) {
             try {
                 System.setOut(new PrintStream(
-                    new FileOutputStream("output.txt")));
+                        new FileOutputStream("output.txt")));
                 System.setIn(new FileInputStream("input.txt"));
             } catch (Exception e) {
                 System.out.println(e);
@@ -93,19 +96,20 @@ public class Solve {
             System.out.println(e);
         }
 
-    }   
+    }
 
-    static List<Long> primesieve(int n){
+    static List<Long> primesieve(int n) {
         boolean[] vis = new boolean[n + 1];
         Arrays.fill(vis, true);
-        
+
         List<Long> primes = new ArrayList<>();
-        for(long i = 2; i < n; i++){
-            if(vis[(int)i] == false) continue;
-            
+        for (long i = 2; i < n; i++) {
+            if (vis[(int) i] == false)
+                continue;
+
             primes.add(i);
-            for(long j = i * i; j < n; j += i)
-                vis[(int)j] = false;
+            for (long j = i * i; j < n; j += i)
+                vis[(int) j] = false;
         }
 
         return primes;
@@ -114,33 +118,34 @@ public class Solve {
     public static void solve() throws Exception {
         List<Long> primes = primesieve(1000005);
 
-
         int t = scn.nextInt();
-        while(t-- > 0){
+        while (t-- > 0) {
             long left = scn.nextLong();
             long right = scn.nextLong();
 
-            boolean[] vis = new boolean[(int)(right - left + 1)];
+            boolean[] vis = new boolean[(int) (right - left + 1)];
             Arrays.fill(vis, true);
 
-            for(long i: primes){
-                if(i * i > right) break;
+            for (long i : primes) {
+                if (i * i > right)
+                    break;
 
                 long start = (left / i) * i;
-                if(start < left) start += i;
+                if (start < left)
+                    start += i;
                 start = Math.max(start, i * i);
 
-                for(long j = start; j <= right; j += i){
-                    vis[(int)(j - left)] = false;
+                for (long j = start; j <= right; j += i) {
+                    vis[(int) (j - left)] = false;
                 }
             }
 
-            for(long i = left; i <= right; i++){
-                if(vis[(int)(i - left)] == true){
+            for (long i = left; i <= right; i++) {
+                if (i >= 2 && vis[(int) (i - left)] == true) {
                     System.out.println(i);
                 }
             }
             System.out.println();
         }
-    }   
+    }
 }
