@@ -1,6 +1,6 @@
 import java.util.*;
 // https://leetcode.com/problems/combination-sum/description/
-// Time = O(2 ^ N), Space = O(N)
+// Time = O(Exponential), Space = O(N)
 
 class Solution {
     List<List<Integer>> subsets = new ArrayList<>();
