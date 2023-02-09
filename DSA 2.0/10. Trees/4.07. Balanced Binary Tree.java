@@ -73,7 +73,7 @@ class Solution2 {
 
 // Brute Force
 // Time = O(N ^ 2), Space = O(N)
-class Solution {
+class Solution3 {
     public int height(TreeNode root) {
         if (root == null)
             return 0;
@@ -94,5 +94,25 @@ class Solution {
         if (Math.abs(lh - rh) > 1)
             return false;
         return isBalanced(root.left) && isBalanced(root.right);
+    }
+}
+
+// Approach 4: Passing Parameter as Array
+class Solution4 {
+    public int dfs(TreeNode root, boolean[] balanced) {
+        if (root == null)
+            return 0;
+        int lh = dfs(root.left, balanced);
+        int rh = dfs(root.right, balanced);
+
+        if (Math.abs(lh - rh) > 1)
+            balanced[0] = false;
+        return Math.max(lh, rh) + 1;
+    }
+
+    public boolean isBalanced(TreeNode root) {
+        boolean[] balanced = { true };
+        dfs(root, balanced);
+        return balanced[0];
     }
 }
