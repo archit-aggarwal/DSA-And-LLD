@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.time.LocalTime;
 
 public class ParkingLot {
     List<Slot> bikes, cars, trucks;
@@ -56,5 +58,15 @@ public class ParkingLot {
             }
         }
         return null;
+    }
+
+    double unpark(Ticket ticket) {
+        ticket.slot.unparkVehicle();
+        LocalTime exitTime = LocalTime.now();
+        return getCharge(ticket.entryTime, exitTime);
+    }
+
+    double getCharge(LocalTime entry, LocalTime exit) {
+        return (exit.getSecond() - entry.getSecond()) * 10;
     }
 }

@@ -12,4 +12,9 @@ public class Slot {
         this.vehicle = vehicle;
         return new Ticket(vehicle, this);
     }
+
+    public void unparkVehicle() {
+        isEmpty = true;
+        this.vehicle = null;
+    }
 }
