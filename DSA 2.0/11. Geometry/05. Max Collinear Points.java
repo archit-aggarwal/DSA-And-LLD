@@ -1,5 +1,5 @@
 import java.util.*;
-// Time = O(N ^ 2), Space = O(N ^ 2) 
+// Time = O(N ^ 2), Space = O(N) 
 
 class Solution {
     public double getSlope(int[] p1, int[] p2) {
