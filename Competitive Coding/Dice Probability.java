@@ -1,14 +1,16 @@
 import java.util.*;
 import java.io.*;
 
-public class Solution {
+// https://cses.fi/problemset/task/1725/
+// Time = O(N * B * 6), Space = O(N * B)
+class Solution {
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 
         public FastReader() {
             br = new BufferedReader(
-                new InputStreamReader(System.in));
+                    new InputStreamReader(System.in));
         }
 
         String next() {
@@ -77,7 +79,7 @@ public class Solution {
         if (System.getProperty("ONLINE_JUDGE") != null) {
             try {
                 System.setOut(new PrintStream(
-                    new FileOutputStream("output.txt")));
+                        new FileOutputStream("output.txt")));
                 System.setIn(new FileInputStream("input.txt"));
             } catch (Exception e) {
                 System.out.println(e);
@@ -93,15 +95,18 @@ public class Solution {
             System.out.println(e);
         }
 
-    }   
+    }
 
-    public static double helper(int n, int sum, double[][] dp){
-        if(n == 0 && sum == 0) return 1.0;
-        if(n <= 0 || sum <= 0) return 0.0;
-        if(dp[n][sum] != -1.0) return dp[n][sum]; // memoization
+    public static double helper(int n, int sum, double[][] dp) {
+        if (n == 0 && sum == 0)
+            return 1.0;
+        if (n <= 0 || sum <= 0)
+            return 0.0;
+        if (dp[n][sum] != -1.0)
+            return dp[n][sum]; // memoization
 
         double ans = 0.0;
-        for(int d = 1; d <= 6; d++){
+        for (int d = 1; d <= 6; d++) {
             ans += helper(n - 1, sum - d, dp) * (1.0 / 6.0);
         }
         return dp[n][sum] = ans;
@@ -112,19 +117,17 @@ public class Solution {
         int a = scn.nextInt();
         int b = scn.nextInt();
 
-
         double[][] dp = new double[n + 1][b + 1];
-        for(int i = 0; i <= n; i++){
-            for(int j = 0; j <= b; j++){
+        for (int i = 0; i <= n; i++) {
+            for (int j = 0; j <= b; j++) {
                 dp[i][j] = -1.0;
             }
         }
 
         double ans = 0;
-        for(int sum = a; sum <= b; sum++){
+        for (int sum = a; sum <= b; sum++) {
             ans += helper(n, sum, dp);
         }
         out.println(String.format("%.6f", ans));
-    }   
+    }
 }
-
