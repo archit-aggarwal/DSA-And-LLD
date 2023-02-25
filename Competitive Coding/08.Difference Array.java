@@ -1,14 +1,16 @@
+// https://www.spoj.com/problems/UPDATEIT/
+
 import java.util.*;
 import java.io.*;
 
-public class Solution {
+class Main {
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 
         public FastReader() {
             br = new BufferedReader(
-                new InputStreamReader(System.in));
+                    new InputStreamReader(System.in));
         }
 
         String next() {
@@ -73,18 +75,6 @@ public class Solution {
     static FastReader scn = new FastReader();
     static FastWriter out = new FastWriter();
 
-    static {
-        if (System.getProperty("ONLINE_JUDGE") != null) {
-            try {
-                System.setOut(new PrintStream(
-                    new FileOutputStream("output.txt")));
-                System.setIn(new FileInputStream("input.txt"));
-            } catch (Exception e) {
-                System.out.println(e);
-            }
-        }
-    }
-
     public static void main(String[] args) {
         try {
             solve();
@@ -93,34 +83,34 @@ public class Solution {
             System.out.println(e);
         }
 
-    }   
+    }
 
     public static void solve() throws Exception {
         int t = scn.nextInt();
-        while(t-- > 0){
+        while (t-- > 0) {
             int n = scn.nextInt();
             int u = scn.nextInt();
 
             long[] diff = new long[n];
 
-            while(u-- > 0){
+            while (u-- > 0) {
                 int l = scn.nextInt();
                 int r = scn.nextInt();
                 int val = scn.nextInt();
 
                 diff[r] += val;
-                if(l > 0) diff[l - 1] -= val;
+                if (l > 0)
+                    diff[l - 1] -= val;
             }
 
-            for(int i = n - 2; i >= 0; i--)
+            for (int i = n - 2; i >= 0; i--)
                 diff[i] += diff[i + 1];
 
             int g = scn.nextInt();
-            while(g-- > 0){
+            while (g-- > 0) {
                 int idx = scn.nextInt();
                 out.println(diff[idx]);
             }
         }
-    }   
+    }
 }
-
