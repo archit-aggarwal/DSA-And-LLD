@@ -3,6 +3,7 @@ import java.io.*;
 
 // https://cses.fi/problemset/task/1725/
 // Time = O(N * B * 6), Space = O(N * B)
+
 class Solution {
     static class FastReader {
         BufferedReader br;
