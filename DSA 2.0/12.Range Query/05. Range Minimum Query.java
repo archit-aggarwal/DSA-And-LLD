@@ -1,14 +1,17 @@
+// Static: https://cses.fi/problemset/task/1647
+// Dynamic: https://cses.fi/problemset/task/1649
+
 import java.util.*;
 import java.io.*;
 
-public class Solution {
+class Solution {
     static class FastReader {
         BufferedReader br;
         StringTokenizer st;
 
         public FastReader() {
             br = new BufferedReader(
-                new InputStreamReader(System.in));
+                    new InputStreamReader(System.in));
         }
 
         String next() {
@@ -77,7 +80,7 @@ public class Solution {
         if (System.getProperty("ONLINE_JUDGE") != null) {
             try {
                 System.setOut(new PrintStream(
-                    new FileOutputStream("output.txt")));
+                        new FileOutputStream("output.txt")));
                 System.setIn(new FileInputStream("input.txt"));
             } catch (Exception e) {
                 System.out.println(e);
@@ -93,12 +96,14 @@ public class Solution {
             System.out.println(e);
         }
 
-    }   
+    }
 
     static int[] nodes;
-    public static void construct(int idx, int left, int right, int[] nums){
-        if(left > right) return;
-        if(left == right) {
+
+    public static void construct(int idx, int left, int right, int[] nums) {
+        if (left > right)
+            return;
+        if (left == right) {
             nodes[idx] = nums[left];
             return;
         }
@@ -109,9 +114,11 @@ public class Solution {
         nodes[idx] = Math.min(nodes[2 * idx + 1], nodes[2 * idx + 2]);
     }
 
-    public static int minQuery(int idx, int nl, int nr, int gl, int gr){
-        if(nr < gl || gr < nl) return Integer.MAX_VALUE; // no overlap
-        if(nl >= gl && nr <= gr) return nodes[idx]; // complete overlap
+    public static int minQuery(int idx, int nl, int nr, int gl, int gr) {
+        if (nr < gl || gr < nl)
+            return Integer.MAX_VALUE; // no overlap
+        if (nl >= gl && nr <= gr)
+            return nodes[idx]; // complete overlap
 
         int mid = nl + (nr - nl) / 2;
         int left = minQuery(2 * idx + 1, nl, mid, gl, gr);
@@ -119,16 +126,18 @@ public class Solution {
         return Math.min(left, right);
     }
 
-    public static void update(int idx, int left, int right, int index, int value){
-        if(left == right){
+    public static void update(int idx, int left, int right, int index, int value) {
+        if (left == right) {
             nodes[idx] = value;
             return;
         }
 
         int mid = left + (right - left) / 2;
 
-        if(index <= mid) update(2 * idx + 1, left, mid, index, value);
-        else update(2 * idx + 2, mid + 1, right, index, value);
+        if (index <= mid)
+            update(2 * idx + 1, left, mid, index, value);
+        else
+            update(2 * idx + 2, mid + 1, right, index, value);
         nodes[idx] = Math.min(nodes[2 * idx + 1], nodes[2 * idx + 2]);
     }
 
@@ -137,7 +146,7 @@ public class Solution {
         int q = scn.nextInt();
 
         int[] nums = new int[n];
-        for(int i = 0; i < n; i++){
+        for (int i = 0; i < n; i++) {
             nums[i] = scn.nextInt();
         }
 
@@ -145,10 +154,10 @@ public class Solution {
         Arrays.fill(nodes, Integer.MAX_VALUE);
         construct(0, 0, n - 1, nums);
 
-        while(q-- > 0){
+        while (q-- > 0) {
             int type = scn.nextInt();
 
-            if(type == 1){
+            if (type == 1) {
                 int index = scn.nextInt();
                 int value = scn.nextInt();
                 update(0, 0, n - 1, index - 1, value);
@@ -158,6 +167,5 @@ public class Solution {
                 out.println(minQuery(0, 0, n - 1, left - 1, right - 1));
             }
         }
-    }   
+    }
 }
-

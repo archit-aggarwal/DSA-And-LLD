@@ -1,6 +1,9 @@
 // https://leetcode.com/problems/range-sum-query-immutable/description/
 // TIme = O(N + Q)
 
+// Static Range Sum Queries 
+// HW: https://cses.fi/problemset/task/1646
+
 class NumArray {
     int[] prefix;
 

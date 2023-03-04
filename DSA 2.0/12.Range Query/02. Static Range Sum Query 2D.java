@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/range-sum-query-2d-immutable/description/
 
+// Variation HW: https://cses.fi/problemset/task/1652
+
 // Time = O(N ^ 2 + Q), Space = O(1)
 class NumMatrix {
     int[][] dp; // Precalculation -> O(N ^ 2)
