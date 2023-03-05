@@ -22,7 +22,7 @@ class BSTIterator {
         TreeNode ans = root.left;
         while (ans.right != null && ans.right != root)
             ans = ans.right;
-            
+
         return ans;
     }
 
