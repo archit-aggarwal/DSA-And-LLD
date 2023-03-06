@@ -32,7 +32,7 @@ class BSTIterator {
             if (root.left == null) {
                 ans = root.val;
                 root = root.right;
-                return ans;
+                break;
             }
             TreeNode floor = floor(root);
             if (floor.right == null) {
