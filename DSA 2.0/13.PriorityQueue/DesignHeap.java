@@ -7,6 +7,19 @@ class Main {
     public static class PriorityQueue {
         ArrayList<Integer> data = new ArrayList<>();
 
+        public PriorityQueue() {
+        }
+
+        public PriorityQueue(int[] arr) {
+            // for(int val: data) add(val);
+            // O(N * log N)
+
+            for (int val : arr)
+                data.add(val); // Complete Binary Tree
+            for (int idx = data.size() - 1; idx >= 0; idx--)
+                downheapify(idx); // Heap Order Property
+        }
+
         public void add(int val) {
             data.add(val);
             upheapify(data.size() - 1);
