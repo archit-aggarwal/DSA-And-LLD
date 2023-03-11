@@ -74,21 +74,13 @@ class PriorityQueue<T> {
     }
 
     boolean swap(int i1, int i2) {
+        T p2 = data.get(i2);
+        T p1 = data.get(i1);
+
         if (comparator == null) {
-            // No Comparator, Sorting by Default
-            Comparable p1 = (Comparable) (data.get(i2));
-            Comparable p2 = (Comparable) (data.get(i1));
-
-            if (p1.compareTo(p2) < 0)
-                return false;
-            return true;
+            return ((Comparable) p1).compareTo((Comparable) p2) < 0;
         }
-
-        T p1 = data.get(i2);
-        T p2 = data.get(i1);
-        if (comparator.compare(p1, p2) < 0)
-            return false;
-        return true;
+        return comparator.compare(p1, p2) < 0;
     }
 
     void upheapify(int idx) {
@@ -165,6 +157,7 @@ class Main {
         System.out.println();
 
         PriorityQueue<Cricketer> pq4 = new PriorityQueue<>(new CricketerAgeComparator());
+        
         pq4.add(new Cricketer("Rohit", 264, 34));
         pq4.add(new Cricketer("Virat", 183, 33));
         pq4.add(new Cricketer("Surya", 150, 32));
@@ -174,6 +167,9 @@ class Main {
             // Default Sorting: Age Comparator: Young Age
         }
         System.out.println();
+
+
+
 
         PriorityQueue<Cricketer> pq5 = new PriorityQueue<>(new CricketerNameComparator());
         pq5.add(new Cricketer("Rohit", 264, 34));
