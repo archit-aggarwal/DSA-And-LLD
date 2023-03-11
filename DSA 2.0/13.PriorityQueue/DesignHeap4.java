@@ -151,7 +151,7 @@ class PriorityQueue<T> {
     }
 }
 
-public class Main {
+class Main {
     public static void main(String[] args) throws Exception {
         PriorityQueue<Cricketer> pq3 = new PriorityQueue<>();
         pq3.add(new Cricketer("Rohit", 264, 34));
