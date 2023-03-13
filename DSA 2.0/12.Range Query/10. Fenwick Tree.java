@@ -42,3 +42,4 @@ class NumArray {
         return query(right) - query(left - 1);
     }
 }
+
