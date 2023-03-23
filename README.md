@@ -4,7 +4,7 @@
 - Low Level Design: Java OOPS, Java Core Advanced, UML Diagrams, Design Principles (SOLID), Design Patterns, Machine Coding Round
 - Competitive Programming: Codeforces, SPOJ, CSES Problem Set Problems
 
-## DSA Sheet 2.0:
+# DSA Sheet 2.0:
 https://drive.google.com/file/d/1TCbt3VTRd2tJR3PwxoY9ITfwTPGINPNE/view?usp=sharing
 
 # Note: Use this sheet as a bookmark. (Go to Bookmarks Manager of Chrome Browser -> Import BookMarks -> Select Above Downloaded HTML File)
