@@ -1,3 +1,4 @@
+import java.util.*;
 // https://leetcode.com/problems/find-if-path-exists-in-graph/description/
 // Time = O(N + E) DFS
 // Space = O(N + E) Adjacency List, O(N) Recursion Stack Space
@@ -6,6 +7,7 @@ class Graph {
     public int n;
     public ArrayList<Integer>[] adj;
 
+    @SuppressWarnings("all")
     public Graph(int n) {
         this.n = n;
         adj = new ArrayList[n];
