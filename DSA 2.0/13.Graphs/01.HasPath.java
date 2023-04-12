@@ -35,6 +35,29 @@ class Graph {
         }
         return false;
     }
+
+    // BFS
+    public boolean BFS(int src, int dest) {
+        Queue<Integer> q = new ArrayDeque<>();
+        q.add(src); // source node
+
+        boolean[] vis = new boolean[n];
+
+        while (q.size() > 0) {
+            src = q.remove();
+
+            if (src == dest)
+                return true;
+            if (vis[src] == true)
+                continue;
+            vis[src] = true;
+
+            for (Integer nbr : adj[src])
+                q.add(nbr);
+        }
+
+        return false;
+    }
 }
 
 class Solution {
@@ -45,5 +68,15 @@ class Solution {
 
         boolean[] vis = new boolean[n];
         return g.hasPath(source, destination, vis);
+    }
+}
+
+class Solution3 {
+    public boolean validPath(int n, int[][] edges, int source, int destination) {
+        Graph g = new Graph(n);
+        for (int[] edge : edges)
+            g.addEdge(edge[0], edge[1]);
+
+        return g.BFS(source, destination);
     }
 }
