@@ -1,17 +1,10 @@
-
-// https://www.hackerrank.com/contests/module-1-java-dsa-class-challenges/challenges/gkstr20-pattern-5
-import java.util.*;
-
+// https://www.codingninjas.com/codestudio/problems/give-me-triangle_893275
 class Solution {
-    @SuppressWarnings("all")
-    public static void main(String[] args) {
-        Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
-
+    public static void ninjaPuzzle(int n) {
         // Approach 1: Grid Based Approach
         for (int row = 1; row <= n; row++) {
             for (int col = 1; col <= n; col++) {
-                if (row + col > n)
+                if (col >= row)
                     System.out.print("*");
                 else
                     System.out.print(" ");
@@ -20,7 +13,7 @@ class Solution {
         }
 
         // Approach 2: Stars & Spaces Approach
-        int stars = 1, spaces = n - 1;
+        int stars = n, spaces = 0;
         for (int row = 1; row <= n; row++) {
             for (int count = 1; count <= spaces; count++) {
                 System.out.print(" ");
@@ -28,9 +21,10 @@ class Solution {
             for (int count = 1; count <= stars; count++) {
                 System.out.print("*");
             }
+
             System.out.println();
-            stars++;
-            spaces--;
+            stars--;
+            spaces++;
         }
     }
 }
