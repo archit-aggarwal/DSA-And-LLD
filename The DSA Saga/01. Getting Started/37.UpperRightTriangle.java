@@ -1,4 +1,5 @@
 // https://www.codingninjas.com/codestudio/problems/give-me-triangle_893275
+
 class Solution {
     public static void ninjaPuzzle(int n) {
         // Approach 1: Grid Based Approach

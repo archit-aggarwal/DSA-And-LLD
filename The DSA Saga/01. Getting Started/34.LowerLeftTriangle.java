@@ -1,5 +1,7 @@
 import java.util.*;
 // https://www.hackerrank.com/contests/module-1-java-dsa-class-challenges/challenges/gkstr18-pattern-4/problem
+// OR
+// https://www.pepcoding.com/resources/online-java-foundation/patterns/pattern-type-1-official/ojquestion
 
 class Solution {
     public static void main(String[] args) {

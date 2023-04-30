@@ -1,6 +1,7 @@
-
-// https://www.hackerrank.com/contests/module-1-java-dsa-class-challenges/challenges/gkstr20-pattern-5
 import java.util.*;
+// https://www.hackerrank.com/contests/module-1-java-dsa-class-challenges/challenges/gkstr20-pattern-5
+// OR
+// https://www.pepcoding.com/resources/online-java-foundation/patterns/pattern-type-3-official/ojquestion
 
 class Solution {
     @SuppressWarnings("all")

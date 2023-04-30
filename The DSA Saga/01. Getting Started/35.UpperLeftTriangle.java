@@ -1,5 +1,7 @@
 import java.util.*;
 // https://www.hackerrank.com/contests/module-1-java-dsa-class-challenges/challenges/print-the-pattern-31-3/problem
+// OR
+// https://www.pepcoding.com/resources/online-java-foundation/patterns/pattern-type-2-official/ojquestion
 
 class Solution {
 

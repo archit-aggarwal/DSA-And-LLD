@@ -1,6 +1,5 @@
-// https://www.codingninjas.com/codestudio/problems/give-me-triangle_893275
-
 import java.util.*;
+// https://www.codingninjas.com/codestudio/problems/number-x_893302
 
 class Main {
     public static void main(String[] args) {
@@ -9,10 +8,11 @@ class Main {
         scn.close();
 
         for (int row = 1; row <= n; row++) {
-            int val = row;
-            for (int col = 1; col <= row; col++) {
-                System.out.print(val);
-                val++;
+            for (int col = 1; col <= n; col++) {
+                if (row - col == 0 || row + col == n + 1)
+                    System.out.print(row);
+                else
+                    System.out.print(" ");
             }
             System.out.println();
         }
