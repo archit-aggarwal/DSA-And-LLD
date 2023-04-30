@@ -1,4 +1,5 @@
 import java.util.*;
+// https://www.hackerrank.com/contests/module-1-java-dsa-class-challenges/challenges/print-the-pattern-31-3/problem
 
 class Solution {
 
