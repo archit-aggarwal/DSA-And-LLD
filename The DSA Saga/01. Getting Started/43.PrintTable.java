@@ -3,7 +3,6 @@ import java.util.*;
 // OR
 // https://pepcoding.com/resources/online-java-foundation/patterns/design-pattern-14-official/ojquestion
 
-
 class Solution {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
