@@ -7,12 +7,11 @@ class Solution {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
+        scn.close();
 
         for (int idx = 1; idx <= 10; idx++) {
             // System.out.println("4x" + idx + "=" + (4 * idx));
             System.out.println(n + "x" + idx + "=" + (n * idx));
         }
-
-        scn.close();
     }
 }
