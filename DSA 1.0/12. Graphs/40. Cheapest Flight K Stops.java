@@ -63,23 +63,29 @@ class Solution1 {
 
 class Solution2 {
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
-        int[] cost = new int[n];
-        Arrays.fill(cost, Integer.MAX_VALUE);
-        cost[src] = 0;
+        int inf = (int) 1e9;
+        int[] dist = new int[n];
+        Arrays.fill(dist, inf);
+        dist[src] = 0;
 
-        for (int i = 0; i <= k; i++) {
-            int[] temp = Arrays.copyOf(cost, n);
-            for (int[] f : flights) {
-                int incoming = f[0];
-                int outgoing = f[1];
-                int price = f[2];
+        for (int relax = 0; relax <= k; relax++) {
+            int[] copy = new int[n];
+            for (int i = 0; i < n; i++)
+                copy[i] = dist[i];
 
-                if (cost[incoming] == Integer.MAX_VALUE)
+            for (int[] edge : flights) {
+                int out = edge[0];
+                int in = edge[1];
+                int weight = edge[2];
+                if (dist[out] == inf)
                     continue;
-                temp[outgoing] = Math.min(temp[outgoing], cost[incoming] + price);
+                copy[in] = Math.min(copy[in], dist[out] + weight);
             }
-            cost = temp;
+            dist = copy;
         }
-        return cost[dst] == Integer.MAX_VALUE ? -1 : cost[dst];
+
+        if (dist[dst] == inf)
+            return -1;
+        return dist[dst];
     }
 }
