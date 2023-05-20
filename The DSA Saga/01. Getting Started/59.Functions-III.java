@@ -17,6 +17,6 @@ class Solution59 {
 
         printFactorial(n);
         System.out.println("Main Method Ended");
-
+        scn.close();
     }
 }

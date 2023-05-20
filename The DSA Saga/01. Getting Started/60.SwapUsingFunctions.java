@@ -1,5 +1,3 @@
-import java.util.*;
-
 class Solution60 {
     public static void swap(int a, int b) {
         System.out.println("Inside Swap: Before Swap: " + a + " " + b);

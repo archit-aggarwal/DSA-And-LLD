@@ -1,6 +1,5 @@
 // https://www.pepcoding.com/resources/online-java-foundation/patterns/design-pattern-10-official/ojquestion
 
-
 import java.util.*;
 
 class Solution52 {
@@ -29,5 +28,7 @@ class Solution52 {
                 spaces++;
             }
         }
+
+        scn.close();
     }
 }

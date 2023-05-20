@@ -29,5 +29,7 @@ class Solution53 {
                 spaces++;
             }
         }
+
+        scn.close();
     }
 }

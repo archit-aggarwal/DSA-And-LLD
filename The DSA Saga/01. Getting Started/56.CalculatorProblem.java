@@ -30,7 +30,7 @@ class Solution56 {
                     break;
                 }
             }
+            scn.close();
         }
-
     }
 }

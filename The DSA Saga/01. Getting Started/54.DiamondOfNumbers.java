@@ -36,5 +36,7 @@ class Solution54 {
                 spaces++;
             }
         }
+
+        scn.close();
     }
 }

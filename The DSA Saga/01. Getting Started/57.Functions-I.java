@@ -1,6 +1,4 @@
-import java.util.*;
-
-class Solution58 {
+class Solution57 {
 
     public static void printTime() {
         System.out.println("Print Time Started");
@@ -8,11 +6,10 @@ class Solution58 {
         System.out.println("Print Time Ended");
     }
 
-    // printTime function called
+    // printTime function not called
     public static void main(String[] args) {
         System.out.println("Main Method Started");
-        printTime();
         System.out.println("Main Method Ended");
-
     }
+
 }
