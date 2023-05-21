@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/majority-element-ii/description/
 
-// Time: () - Space ()
+// Time complexity: O(N) Space complexity: O(1)
 
 import java.util.*;
 

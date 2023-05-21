@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/find-pivot-index/description/
 
-// Time: () - Space ()
+// Time complexity: O(N) Space complexity: O(N)
 
 import java.util.*;
 

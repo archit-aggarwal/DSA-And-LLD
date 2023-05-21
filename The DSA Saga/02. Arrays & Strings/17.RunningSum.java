@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/running-sum-of-1d-array/submissions/952009975/
 
-// Time: () - Space ()
+// Time complexity: O(N) Space complexity: O(N)
 
 import java.util.*;
 

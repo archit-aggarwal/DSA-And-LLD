@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/first-missing-positive/description/
 
-// Time: () - Space ()
+// Time complexity: O(N) Space complexity: O(1)
 
 import java.util.*;
 

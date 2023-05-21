@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/product-of-array-except-self/description/
 
-// Time: () - Space ()
+// Time complexity: O(N) Space complexity: O(N)
 
 import java.util.*;
 

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/missing-number/description/
 
-// Time: () - Space ()
+// Approach 1 & 2: Time complexity: O(N) Space complexity: O(1)
 
 import java.util.*;
 

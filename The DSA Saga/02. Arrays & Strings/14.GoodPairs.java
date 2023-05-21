@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/number-of-good-pairs/description/
 
+// Time complexity: O(N^2) Space complexity: O(1)
+
 import java.util.*;
 
 class Solution14 {

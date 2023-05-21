@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum/description/
 
-// Time: () - Space ()
+// Time complexity: O(N) Space complexity: O(1)
 
 import java.util.*;
 

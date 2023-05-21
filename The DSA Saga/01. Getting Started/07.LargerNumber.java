@@ -1,5 +1,5 @@
-
 // https://practice.geeksforgeeks.org/problems/java-if-else-decision-making0924/1
+
 import java.util.*;
 
 // Larger Among 2 (If Else)

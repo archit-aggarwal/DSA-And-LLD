@@ -1,6 +1,6 @@
 import java.util.*;
 
-// Time: () - Space ()
+// Time complexity: O(N) Space complexity: O(N)
 
 class Solution18 {
     // APPROACH : 1
