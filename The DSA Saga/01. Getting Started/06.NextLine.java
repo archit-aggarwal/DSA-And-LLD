@@ -1,5 +1,7 @@
-
 // https://practice.geeksforgeeks.org/problems/nextline-and-next/1
+
+// Time: O(1) - Space O(1)
+
 import java.util.*;
 
 class Geeks {

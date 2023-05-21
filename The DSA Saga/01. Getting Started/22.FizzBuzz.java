@@ -1,5 +1,7 @@
 // https://www.hackerrank.com/challenges/fizzbuzz/problem
 
+// Time: O(1) - Space O(1)
+
 class Solution {
     public static void main(String[] args) {
         int fizz = 0, buzz = 0;

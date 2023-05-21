@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/first-missing-positive/description/
 
+// Time: () - Space ()
+
 import java.util.*;
 
 class Solution30 {

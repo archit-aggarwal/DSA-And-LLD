@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/majority-element/description/
 
+// Time: () - Space ()
+
 import java.util.*;
 
 class Solution23 {

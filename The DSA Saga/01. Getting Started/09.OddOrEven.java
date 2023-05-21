@@ -1,5 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/even-odd/1
 
+// Time: O(1) - Space O(1)
+
 class Solution {
     public void evenOdd(int a, int b) {
 

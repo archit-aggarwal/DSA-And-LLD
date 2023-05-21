@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/minimum-value-to-get-positive-step-by-step-sum/description/
 
+// Time: () - Space ()
+
 import java.util.*;
 
 class Solution20 {

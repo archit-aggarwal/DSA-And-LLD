@@ -1,5 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/maximum-repeating-number4858/1
 
+// Time: () - Space ()
+
 import java.uitl.*;
 
 class Solution29 {

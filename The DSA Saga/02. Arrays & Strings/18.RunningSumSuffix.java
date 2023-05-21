@@ -1,5 +1,7 @@
 import java.util.*;
 
+// Time: () - Space ()
+
 class Solution18 {
     // APPROACH : 1
     public int[] runningSum(int[] nums) {

@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/sum-of-all-odd-length-subarrays/description/
 
+// Time: () - Space ()
+
 import java.util.*;
 
 class Solution16 {

@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/fibonacci-number/description/
 
+// Time complexity: O(N) Space complexity: O(1)
+
 class Solution {
     public int fib(int n) {
         if (n <= 1)

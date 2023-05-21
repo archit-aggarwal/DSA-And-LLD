@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/find-the-duplicate-number/description/
 
+// Time: () - Space ()
+
 import java.util.*;
 
 class Solution26 {

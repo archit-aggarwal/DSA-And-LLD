@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/find-the-highest-altitude/
 
+// Time: () - Space ()
+
 import java.util.*;
 
 class Solution19 {

@@ -1,4 +1,3 @@
-
 class Solution61 {
 
     public static int getFactorial(int x) {

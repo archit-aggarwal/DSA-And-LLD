@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/missing-number/description/
 
+// Time: () - Space ()
+
 import java.util.*;
 
 class Solution25 {

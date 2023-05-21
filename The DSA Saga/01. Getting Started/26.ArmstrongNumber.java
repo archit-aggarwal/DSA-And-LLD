@@ -1,5 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/armstrong-numbers2727/1
 
+// Time complexity: O(log N) Space complexity: O(1)
+
 class Solution {
     static String armstrongNumber(int n) {
         int sum = 0;
