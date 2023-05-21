@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/find-pivot-index/description/
 
+// Time complexity: O(N) Space complexity: O(N)
+
 import java.util.*;
 
 class Solution21 {

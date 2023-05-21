@@ -1,5 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/learn-to-comment-java/1
 
+// Time: O(1) - Space O(1)
+
 class Geeks {
     // Function to print a and c
     // comment the line that outputs b

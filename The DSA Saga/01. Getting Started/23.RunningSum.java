@@ -1,5 +1,7 @@
-
 // https://www.hackerrank.com/contests/module-1-java-dsa-class-challenges/challenges/running-sum-for-loop
+
+// Time: O(N) - Space O(1)
+
 import java.util.*;
 
 class RunningSum {

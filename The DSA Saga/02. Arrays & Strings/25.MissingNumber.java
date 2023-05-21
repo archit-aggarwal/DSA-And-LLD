@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/missing-number/description/
 
+// Approach 1 & 2: Time complexity: O(N) Space complexity: O(1)
+
 import java.util.*;
 
 class Solution25 {

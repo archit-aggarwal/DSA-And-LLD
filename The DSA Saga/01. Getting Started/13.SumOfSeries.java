@@ -1,5 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/sum-of-first-n-terms5843/1
 
+// Time: O(N) - Space O(1)
+
 class Solution {
     long sumOfSeries(long N) {
         long sum = 0;

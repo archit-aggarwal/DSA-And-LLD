@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/
 
+// Time complexity: O(logN) Space complexity: O(1)
+
 class Solution {
     public int subtractProductAndSum(int n) {
         int product = 1, sum = 0;

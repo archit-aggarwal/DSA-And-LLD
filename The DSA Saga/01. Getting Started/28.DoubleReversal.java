@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/a-number-after-a-double-reversal/
 
+// Time complexity: O(1) Space complexity: O(1)
+
 class Solution {
     public boolean isSameAfterReversals(int num) {
         if (num == 0)

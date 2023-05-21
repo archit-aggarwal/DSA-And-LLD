@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/first-missing-positive/description/
 
+// Time complexity: O(N) Space complexity: O(1)
+
 import java.util.*;
 
 class Solution30 {

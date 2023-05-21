@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/majority-element/description/
 
+// Time complexity: O(N) Space complexity: O(1)
+
 import java.util.*;
 
 class Solution23 {

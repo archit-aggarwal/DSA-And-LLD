@@ -1,5 +1,7 @@
 // https://www.interviewbit.com/problems/max-min-05542f2f-69aa-4253-9cc7-84eb7bf739c4/
 
+// Time complexity: O(N) Space complexity: O(1)
+
 class Solution10 {
     // APPROACH : 1
     public int solve(int[] arr) {

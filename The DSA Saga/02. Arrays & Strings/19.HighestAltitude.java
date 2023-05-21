@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/find-the-highest-altitude/
 
+// Time complexity: O(N) Space complexity: O(1)
+
 import java.util.*;
 
 class Solution19 {

@@ -1,3 +1,5 @@
+// Time complexity: O(N) Space complexity: O(N)
+
 import java.util.*;
 
 class Solution4 {

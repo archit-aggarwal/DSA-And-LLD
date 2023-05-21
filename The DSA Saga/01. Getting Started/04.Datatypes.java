@@ -1,5 +1,7 @@
 // https://practice.geeksforgeeks.org/problems/data-types-java/1
 
+// Time: O(1) - Space O(1)
+
 class Geeks {
 
     // Function to do operations with different data types

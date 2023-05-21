@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/
 
+// Time complexity: O(N) Space complexity: O(1)
+
 import java.util.*;
 
 class Solution12 {

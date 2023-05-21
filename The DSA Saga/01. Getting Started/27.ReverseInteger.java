@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/reverse-integer/
 
+// Time complexity: O(log10(n)) Space complexity: O(1)
+
 class Solution {
     public int reverse(int n) {
         int res = 0;

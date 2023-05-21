@@ -1,5 +1,7 @@
 // https://leetcode.com/problems/sum-of-all-odd-length-subarrays/description/
 
+// Time complexity: O(N^2) Space complexity: O(1)
+
 import java.util.*;
 
 class Solution16 {
@@ -18,5 +20,4 @@ class Solution16 {
         return answer;
 
     }
-
 }

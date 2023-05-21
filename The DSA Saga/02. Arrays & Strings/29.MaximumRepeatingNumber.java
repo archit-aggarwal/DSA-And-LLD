@@ -1,6 +1,8 @@
 // https://practice.geeksforgeeks.org/problems/maximum-repeating-number4858/1
 
-import java.uitl.*;
+// Time complexity: O(N) Space complexity: O(1)
+
+import java.util.*;
 
 class Solution29 {
     int maxRepeating(int[] nums, int n, int k) {

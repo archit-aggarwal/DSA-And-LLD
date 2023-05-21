@@ -1,5 +1,8 @@
-import java.util.*;
 // https://www.programiz.com/java-programming/examples/swap-two-numbers
+
+// Time: O(1) - Space O(1)
+
+import java.util.*;
 
 class Main {
     @SuppressWarnings("all")
