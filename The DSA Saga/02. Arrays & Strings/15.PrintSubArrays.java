@@ -1,4 +1,4 @@
-// Appraoch 1: Time complexity: O(N^3) Space complexity: O(1)
+// Appraoch 1: Time complexity: O(N^2) Space complexity: O(1) 
 
 // Appraoch 2: Time complexity: O(N^2) Space complexity: O(N)
 

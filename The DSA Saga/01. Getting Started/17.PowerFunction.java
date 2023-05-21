@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/powx-n/description/
 
-// Time complexity: O(N) Space complexity: O(1)
+// Time complexity: O(B) Space complexity: O(1)
 
 class Solution {
     public double myPow(double x, int b) {

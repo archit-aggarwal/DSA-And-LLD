@@ -1,3 +1,5 @@
+// Time = O(N), Space = O(1)
+
 class Solution61 {
 
     public static int getFactorial(int x) {
