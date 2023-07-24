@@ -1,3 +1,7 @@
+// https://practice.geeksforgeeks.org/problems/bubble-sort/1
+
+// time = O(n^2) ; space = O(1) ; stable = YES;
+
 class Solution {
     public static int compare(int[] arr, int l, int r) {
         if (arr[l] > arr[r])
